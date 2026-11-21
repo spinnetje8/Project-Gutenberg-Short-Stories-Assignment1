@@ -1,4 +1,5 @@
 **The data**
+
 The data contains 24 short stories (.txt) from the Gutenberg Project in 6 languages: Italian, Finnish, English, Hungarian, French, and German. There are 4 stories in each language. One data file is one short story. 
 
 This dataset was created to explore differences in short stories in different languages and from different cultures in Europe. This dataset can help explore questions for example about differences in language, but also differences across decades. It could also potentially be expanded to include for example gender comparisons or stories from outside of Europe. 
@@ -13,19 +14,29 @@ Preprocessing:
 The data was processed to have a year of earliest possible publication and a year of latest possible publication. For stories that only contained one year, these years are the same. No further cleaning of the data was done to allow the data to be manipulated by anyone who wishes to use it in their own independent way. 
 
 **Structure**
+
 The folder contains the data (.txt files) for each short story, a README.md with information about the dataset, a requirements.txt with information about the required programmes and packacges, metadata.csv which contains metadata about each short story, a python notebook 'check_dataset.ipynb' to check the contents and quality of the metadata, a python notebook 'prepare_dataset.ipynb' with the preprocessing code, and finally a .gitignore. 
 
 The codebook for the metadata.csv:
 
 **Variable, Description, Type, Allowed values / missing value**
+
 id, unique id for each story, string, 'gut_'+ 5 digits; cannot be empty
+
 file, the relative path for each story, string, 'data/gut_' + 5 digits +'.txt'; cannot be empty
+
 title, the title of the story, string, 1+ words including special characters; empty if unknown
+
 author, the name of the author of the story as given on Project Gutenberg, string, 1+ words including special characters, Anonymous; empty if unknown
+
 language, the language of the story, categorical, ISO 639-1 two-letter codes, e.g., en, it, de; empty if unknown
+
 year_earliest, year of first publication, integer, 1700–1950; empty if unknown
+
 year_latest, year of latest publication, integer, 1700–1950; empty if unknown
+
 source, source of short story, string, 'https://www.gutenberg.org/ebooks/' + 5 digits; empty if unknown
+
 licence, the license of the short story, string, licence codes and descriptions, e.g., CC0, Public domain; empty if unknown
 
 **Uses and Limitations**
